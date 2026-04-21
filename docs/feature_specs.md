@@ -57,7 +57,7 @@ Located in: `python/`
 
 ### 1.4 Reference vs Implementation
 
-The repository includes a reference implementation in `demo_projectiles/`, which contains:
+The repository includes a reference implementation in `reference/demo_projectiles/`, which contains:
     - C++ (Proc*C) backend code
     - CGI scripts
     - HTML files
