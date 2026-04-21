@@ -1,0 +1,301 @@
+Row 1
+Rating = 100
+000000088&regular&Entry level Engineer&                  Java Development&1&              &              &      Buffalo& 35000& 48000&                   IBM&          &          &                   &                                                               &                                                            &
+Row 2
+Rating = 100
+000000089&regular&     Senior Engineer&               UNIX Administration&1&              &              &      Chicago& 65000& 78000&                   IBM&  09/30/00&          &                   &                                                               &                                                            &
+Row 3
+Rating = 100
+       99&regular&             Analyst&              Database Development&1&              &              &San Francisco& 50000& 70000&             Microsoft&05/10/2002&          &recruitment@ads.com&                                                               &                                                            &
+Row 4
+Rating = 100
+      100&regular&             Analyst&              Database Development&1&              &              &San Francisco& 55000& 70000&                    GE&05/10/2002&          &recruitment@ads.com&                                                               &                                                            &
+Row 5
+Rating = 100
+      101&regular&      Senior Analyst&                   Web Development&1&              &              &       Austin& 60000& 90000&             Microsoft&04/30/2002&          & rec@austin.ibm.com&                                                               &              5+ years experience Bachelor or MS in CS or CE&
+Row 6
+Rating = 100
+      102&regular&      Senior Analyst&            E-Commerce Development&1&              &              &     Portland& 65000& 98000&                 Intel&03/31/2002&          &     manp@intel.com&                                                               &                                                            &
+Row 7
+Rating = 100
+      103&regular&      Senior Analyst&           Database Administration&1&              &              &       Austin& 40000& 67000&                   IBM&09-01-2002&          &                   &                                                               &                                                            &
+Row 8
+Rating = 100
+      104&regular&  Programmer Analyst&                   Mac Development&1&              &              &   Pittsburgh& 56000& 71000&       Apple Computers&09-15-2002&          &                   &                                                               &                                                            &
+Row 9
+Rating = 100
+      105&regular&             Analyst&                        Accounting&1&Atlantic Coast&North Carolina&      Raleigh& 55000& 70000&                   IBC&09-30-2002&   XB-9901&     yesman@ibc.com&                                                               &		1. Two years of tesing; 2. Bachelor or higher in CS, CE.
+&
+Row 10
+Rating = 100
+      107&regular&  Programmer Analyst&                  Java Development&1&     Southwest&              &             & 50000& 60000&              Wal-Mart&12-15-2002&          &                   &                                                             		&                                                          		&
+Row 11
+Rating = 100
+      109&regular&      Senior Analyst&              Database Development&1&              &              &      Buffalo& 40000& 55000&                   IDS&          &          &                   &                                                               &                                                            &
+Row 12
+Rating = 100
+      110&regular&      Staff Engineer&                               R&D&1&   Middle-west&              &             & 56000& 80000&       Apple Computers&09-10-2002&          &                   &                                                               &                                                            &
+Row 13
+Rating = 100
+      111&regular&            Engineer&         Device Driver Development&1&              &              &    Allentown& 50000& 60000&                    GE&06-16-2002&          &                   &                                                               &                                                            &
+Row 14
+Rating = 100
+      114&regular&     Senior Engineer&         Device Driver Development&1&        Middle&      Arkansas&  Little Rock& 60000& 70000&                   EDS&08-10-2002&          &                   &                                                               &                                                            &
+Row 15
+Rating = 100
+      115&regular&             Analyst&                    Digital Design&1&     Northwest&    Washington&      Seattle& 60000& 75000&             Microsoft&09-15-2002&          &                   &                                                               &                                                            &
+Row 16
+Rating = 100
+      119&regular&      Staff Engineer&                   Embedded System&1&      Mountain&              &             & 61000& 61000&       Apple Computers&09-30-2002&          &                   &                                                               &                                                            &
+Row 17
+Rating = 100
+      121&regular&  Programmer Analyst&                         Marketing&1&Atlantic Coast&              &      Atlanta& 59000& 79000&                  Ford&12-31-2002&MK-12-2002&     bless@ford.com&                    Marketing new environment friendly vhicles.&                                                            &
+Row 18
+Rating = 100
+      122&regular&      Staff Engineer&Multimedia Application Development&1&      Mountain&              &             & 55000& 61000&                Micron&12-31-2002&          &                   &                                                               &                                                            &
+Row 19
+Rating = 100
+      123&regular&             Manager&              Database Development&1&        Middle&          Iowa&   Des Moines& 45000& 51000&                Micron&09-15-2002&          &                   &                                                               &                                                            &
+Row 20
+Rating = 100
+000000001&regular&             Manager&                   Quality Control&1&          West&    California&     San Jose& 80000& 88000&                 Intel&          &          &                   &                                                               &                                                            &
+Row 21
+Rating = 100
+000000003&regular&Entry level Engineer&           UNIX System Programming&1&              &         Texas&       Austin& 56000& 68000&      SUN Microsystems&          &          &                   &                                                               &                                                            &
+Row 22
+Rating = 100
+000000002&regular&             Manager&                     Manufacturing&1&          West&    California&     San Jose& 80000& 88000&                 Intel&          &          &                   &                                                               &                                                            &
+Row 23
+Rating = 100
+000000004&regular&     Senior Engineer&                           Process&1&              &         Texas&       Austin& 55000& 63000&                   AMD&          &          &                   &                                                               &                                                            &
+Row 24
+Rating = 100
+000000005&regular&            Engineer&                  Network Security&7&              &              &     Portland& 44000&    -1&                Oracle&          &          &                   &                                                               &                                                            &
+Row 25
+Rating = 100
+000000006&regular&            Engineer&                        Accounting&1&              &         Texas&       Austin& 32000& 40000&              Motorola&          &          &                   &                                                               &                                                            &
+Row 26
+Rating = 100
+000000007&regular&            Engineer&                            Device&1&              &         Texas&       Austin& 32000& 40000&              Motorola&          &          &                   &                                                               &                                                            &
+Row 27
+Rating = 100
+000000016&regular&            Engineer&                     Analog Design&1&              &         Texas&       Austin& 50000& 58000&          Cirrus Logic&          &          &                   &                                                               &                                                            &
+Row 28
+Rating = 100
+000000017&regular&            Engineer&                            System&1&              &         Texas&       Austin& 55000& 63000&          Cirrus Logic&          &          &                   &                                                               &                                                            &
+Row 29
+Rating = 100
+000000018&regular&            Engineer&                            System&1&     Southwest&              &  Albuquerque& 60000& 68000&              Lockheed&          &          &                   &                                                               &                                                            &
+Row 30
+Rating = 100
+000000015&regular&     Senior Engineer&           UNIX System Programming&1&     Southwest&         Texas&       Austin& 45000& 53000&                   BMC&          &          &                   &                                                               &                                                            &
+Row 31
+Rating = 100
+000000010&regular&            Engineer&                    Digital Design&1&              &         Texas&       Austin& 30000& 38000&          Cirrus Logic&          &          &                   &                                                               &                                                            &
+Row 32
+Rating = 100
+000000011&regular&     Senior Engineer&                   Mac Development&1&              &         Texas&       Austin& 35000& 50000&       Apple Computers&          &          &                   &                                                               &                                                            &
+Row 33
+Rating = 100
+000000012&regular&            Engineer&                    Digital Design&1&              &         Texas&       Austin& 30000& 55000&                  Dell&          &          &                   &                                                               &                                                            &
+Row 34
+Rating = 100
+000000013&regular&     Senior Engineer&               UNIX Administration&1&              &     Wisconsin&    Green Bay& 35000& 45000&                    GE&          &          &                   &                                                               &                                                            &
+Row 35
+Rating = 100
+000000014&regular&            Engineer&           UNIX System Programming&1&              &South Carolina&     Columbia& 40000& 60000&                 Chase&          &          &                   &                                                               &                                                            &
+Row 36
+Rating = 100
+000000019&regular&             Manager&                  Java Development&1&              &         Texas&      El Paso& 65000& 73000&                Compaq&          &          &                   &                                                               &                                                            &
+Row 37
+Rating = 100
+000000020&regular&            Director&                     Analog Design&1&              &         Texas&       Austin& 70000& 78000&          Cirrus Logic&          &          &                   &                                                               &                                                            &
+Row 38
+Rating = 100
+000000021&regular&     Project Manager&                    Digital Design&1&              &         Texas&       Austin& 75000& 83000&          Cirrus Logic&          &          &                   &                                                               &                                                            &
+Row 39
+Rating = 100
+000000022&regular&             Manager&                Project Management&1&              &      Missouri&  Saint Louis& 65000& 80000&                  USDA&          &          &                   &Managing a large Feds funded project involving B2B applications&                                                            &
+Row 40
+Rating = 100
+000000023&regular&            Director&                       Engineering&1&              &    California&      Fremont& 85000& 93000&          Cirrus Logic&          &          &                   &                                                               &                                                            &
+Row 41
+Rating = 100
+000000024&regular&            Engineer&               UNIX Administration&1&              &              &  San Antonio& 60000& 90000&                   CSC&          &          &                   &            Managing SUN Solaris and Compaq Tru-64 UNIX systems&                      At least three years at the job before&
+Row 42
+Rating = 100
+000000025&regular&     Senior Engineer&                System Integration&1&              &         Texas&       Austin& 51000& 76000&              Sam Sung&          &          &                   &Integrate software and hardware components of 3D digital phones&                                                            &
+Row 43
+Rating = 100
+000000026&regular&            Engineer&                           Product&1&              &         Texas&       Austin&100000&108000&          Cirrus Logic&          &          &                   &                                                               &                                                            &
+Row 44
+Rating = 100
+000000027&regular&            Engineer&                   Mac Development&1&              &              &      Fremont&110000&118000&   Computer Associates&          &          &                   &                                                               &                                                            &
+Row 45
+Rating = 100
+000000028&regular&      Staff Engineer&                              Test&1&              &              &      Fremont&115000&123000&          Cirrus Logic&          &          &                   &                                                               &                                                            &
+Row 46
+Rating = 100
+000000029&regular&            Engineer&                System Integration&1&              &              &      Fremont& 50000& 75000&   Computer Associates&          &          &                   &                                                               &                                                            &
+Row 47
+Rating = 100
+000000030&regular&            Engineer&                          Software&1&              &         Texas&       Austin&125000&133000&          Cirrus Logic&          &          &                   &                                                               &                                                            &
+Row 48
+Rating = 100
+000000031&regular&            Engineer&                              Test&1&              &         Texas&       Dallas& 60000& 68000&              Motorola&          &          &                   &                                                               &                                                            &
+Row 49
+Rating = 100
+000000032&regular&            Engineer&                Oracle Development&1&              &         Texas&      Houston& 55000& 63000&              Motorola&          &          &                   &                                                               &                                                            &
+Row 50
+Rating = 100
+000000033&regular&            Engineer&                            Device&1&              &              &  Los Angeles& 69000& 77000&              Motorola&          &          &                   &                                                               &                                                            &
+Row 51
+Rating = 100
+000000034&regular&            Engineer&                           Process&1&              &              &      Phoenix& 55000& 63000&              Motorola&          &          &                   &                                                               &                                                            &
+Row 52
+Rating = 100
+000000035&regular&            Engineer&                            Device&1&              &              &         Reno& 45000& 53000&                 Intel&          &          &                   &                                                               &                                                            &
+Row 53
+Rating = 100
+000000036&regular&            Engineer&                            Device&1&       Pacific&              &    San Diego& 60000& 68000&              Motorola&          &          &                   &                                                               &                                                            &
+Row 54
+Rating = 100
+000000037&regular&            Engineer&           UNIX System Programming&1&     Northwest&              &      Seattle& 49000& 60000&                    GE&          &          &                   &                                                               &                                                            &
+Row 55
+Rating = 100
+000000038&regular&            Engineer&                  Java Development&1&       Pacific&              &      Oakland& 56000& 64000&       Apple Computers&          &          &                   &                                                               &                                                            &
+Row 56
+Rating = 100
+000000039&regular&            Engineer&                System Integration&1&              &              &     Santa Fe& 45000& 55000&                 Intel&          &          &                   &                                                               &                                                            &
+Row 57
+Rating = 100
+000000040&regular&            Engineer&                    System Testing&1&     Northwest&              &        Boise& 49000& 65000&                Micron&          &          &                   &                                                               &                                                            &
+Row 58
+Rating = 100
+000000041&regular&            Engineer&               Windows Development&1&              &              &     Portland& 32000& 40000&                 Intel&          &          &                   &                                                               &                                                            &
+Row 59
+Rating = 100
+000000042&regular&            Engineer&                           Process&1&              &              &     Santa Fe& 32000& 40000&                 Intel&          &          &                   &                                                               &                                                            &
+Row 60
+Rating = 100
+000000043&regular&            Engineer&                          Software&1&              &              &    Arlington& 40000& 60000&      General Dynamics&          &          &                   &                                                               &                                                            &
+Row 61
+Rating = 100
+000000044&regular&      Staff Engineer&                          Software&1&              &              &      Atlanta& 35000& 43000&National Semiconductor&          &          &                   &                                                               &                                                            &
+Row 62
+Rating = 100
+000000045&regular&            Engineer&               Windows Development&1&              &              &  Santa Clara& 40000& 48000&             Microsoft&          &          &                   &                        Develop and test Windows based products&                                                            &
+Row 63
+Rating = 100
+000000046&regular&     Senior Engineer&                System Integration&1&              &              &     Columbus& 45000& 70000&                   NEC&          &          &                   &                                                               &                                                            &
+Row 64
+Rating = 100
+000000047&regular&            Engineer&                  Network Security&1&              &              &       Tucson& 50000& 69000&       Apple Computers&          &          &                   &                                                               &                                                            &
+Row 65
+Rating = 100
+000000048&regular&            Engineer&                 Field Application&1&              &              &       Boston& 55000& 63000&National Semiconductor&          &          &                   &                                                               &                                                            &
+Row 66
+Rating = 100
+000000049&regular&            Engineer&                         Equipment&1&              &              &       Boston& 60000& 68000&      Texas Instrument&          &          &                   &                                                               &                                                            &
+Row 67
+Rating = 100
+000000050&regular&            Engineer&                           Process&1&              &              &       Dallas& 65000& 73000&      Texas Instrument&          &          &                   &                                                               &                                                            &
+Row 68
+Rating = 100
+000000051&regular&             Manager&                         Marketing&1&              &              &      Bedford& 60000& 70000&                  MSDW&          &          &                   &                                                               &                                                            &
+Row 69
+Rating = 100
+000000052&regular&             Manager&                     Manufacturing&1&              &              &     Milpitas& 50000& 75000&       Hewlett Packard&          &          &                   &                                                               &                                                            &
+Row 70
+Rating = 100
+000000053&regular&             Manager&           UNIX System Programming&1&              &              &      Chicago& 60000& 80000&                  Ford&          &          &                   &                                                               &                                                            &
+Row 71
+Rating = 100
+000000054&regular&     Project Manager&                        Production&1&              &              &     Milpitas& 60000& 85000&                   NEC&          &          &                   &                                                               &                                                            &
+Row 72
+Rating = 100
+000000055&regular&            Director&                       Engineering&1&              &              &     San Jose& 70000& 90000&             Microsoft&          &          &                   &                                                               &                                                            &
+Row 73
+Rating = 100
+000000056&regular&            Engineer&                  Java Development&1&              &              &     San Jose& 95000&103000&              Broadcom&          &          &                   &                                                               &                                                            &
+Row 74
+Rating = 100
+000000057&regular&            Engineer&                  Java Development&1&              &              &    San Diego& 75000& 87000&      SUN Microsystems&          &          &                   &                                                               &                                                            &
+Row 75
+Rating = 100
+000000058&regular&          Supervisor&                  Characterization&1&              &              &     Portland& 70000& 78000&                 Intel&06-03-2000&          &       sb@intel.com&                                                               &                                                    anything&
+Row 76
+Rating = 100
+000000059&regular&          Supervisor&                  Characterization&1&              &              &     Portland& 70000& 78000&                 Intel&06-03-2000&          &       sb@intel.com&                                                               &                                                    anything&
+Row 77
+Rating = 100
+000000060&regular&            Engineer&                        Maintenace&1&              &              &      Chicago& 30000& 40000&                   EMC&          &          &                   &                                                               &                                                            &
+Row 78
+Rating = 100
+000000061&regular&          Technician&                        Oracle DBA&1&              &              &        Miami& 35000& 45000&      SUN Microsystems&          &          &                   &                                                               &                                                            &
+Row 79
+Rating = 100
+000000062&regular&            Operator&                 Technical Support&1&              &              &     New York& 40000& 50000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 80
+Rating = 100
+000000063&regular&            Operator&                  Network Security&1&              &              &     San Jose& 45000& 55000&                   EMC&          &          &                   &                                                               &                                                            &
+Row 81
+Rating = 100
+000000064&regular&            Engineer&                        Maintenace&1&              &              &      Seattle& 30000& 40000&                   EMC&          &          &                   &                                                               &                                                            &
+Row 82
+Rating = 100
+000000065&regular&          Technician&                          Facility&1&              &              &     Syracuse& 35000& 45000&   Computer Associates&          &          &                   &                                                               &                                                            &
+Row 83
+Rating = 100
+000000066&regular&            Operator&                 Technical Support&1&              &              &     San Jose& 40000& 50000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 84
+Rating = 100
+000000067&regular&            Operator&                  Network Security&1&              &              &     San Jose& 45000& 55000&                   EMC&          &          &                   &                                                               &                                                            &
+Row 85
+Rating = 100
+000000068&regular&     Senior Engineer&                            Design&1&              &              &  Santa Clara& 50000& 60000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 86
+Rating = 100
+000000069&regular&      Staff Engineer&                  Embedded Systems&1&              &       Vermont&             & 55000& 65000&                   EMC&          &          &                   &                                                               &                                                            &
+Row 87
+Rating = 100
+000000070&regular&            Engineer&                           Product&1&              &              &     San Jose& 60000& 70000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 88
+Rating = 100
+000000071&regular&     Senior Engineer&                     System Design&1&              &              &     San Jose& 65000& 75000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 89
+Rating = 100
+000000072&regular&     Senior Engineer&                            Design&1&              &              &     San Jose& 70000& 80000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 90
+Rating = 100
+000000073&regular&     Senior Engineer&                  Network Security&1&              &              &     San Jose& 75000& 85000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 91
+Rating = 100
+000000074&regular&             Manager&                Project Management&1&              &              &       Newark& 80000& 90000&                   AIG&          &          &                   &                                                               &                                                            &
+Row 92
+Rating = 100
+000000075&regular&     Senior Engineer&             MS Access Development&1&              &              & Philadelphia& 85000& 95000&         Bank One Corp&          &          &                   &                                                               &                                                            &
+Row 93
+Rating = 100
+000000076&regular&          Supervisor&                  Java Development&1&              &              &     New York& 90000&100000&          Merril Lynch&          &          &                   &                                                               &                                                            &
+Row 94
+Rating = 100
+000000077&regular&            Engineer&                  Java Development&1&              &              &     Hartford& 95000&105000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 95
+Rating = 100
+000000078&regular&     Senior Engineer&                           Product&1&              &              &      Detroit& 50000& 70000&                   GMC&          &          &                   &                                                               &                                                            &
+Row 96
+Rating = 100
+000000079&regular&            Engineer&                           Process&1&              &              &     San Jose&105000&115000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 97
+Rating = 100
+000000080&regular&            Engineer&                  Network Security&1&              &              &  Santa Clara&110000&120000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 98
+Rating = 100
+000000081&regular&            Engineer&                             Sales&1&              &              &  Santa Clara&115000&125000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 99
+Rating = 100
+000000082&regular&            Director&                            Design&1&              &              &  Santa Clara&120000&130000&                Oracle&          &          &                   &                                                               &                                                            &
+Row 100
+Rating = 100
+000000083&regular&            Engineer&                        Oracle DBA&1&              &              &  Santa Clara& 70000& 90000&                 Chase&          &          &                   &                                                               &                                                            &

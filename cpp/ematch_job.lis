@@ -1,0 +1,30 @@
+
+Pro*C/C++: Release 21.0.0.0.0 - Production on Wed Mar 26 19:41:16 2025
+Version 21.9.0.0.0
+
+Copyright (c) 1982, 2023, Oracle and/or its affiliates.  All rights reserved.
+
+Error at line 13, column 10 in file c_cpp_includes.h
+    13  #include <iostream>
+    13  .........1
+    13  PCC-S-02015, unable to open include file
+Error at line 14, column 10 in file c_cpp_includes.h
+    14  #include <fstream>
+    14  .........1
+    14  PCC-S-02015, unable to open include file
+Error at line 15, column 10 in file c_cpp_includes.h
+    15  #include <ostream>
+    15  .........1
+    15  PCC-S-02015, unable to open include file
+Error at line 16, column 10 in file c_cpp_includes.h
+    16  #include <sstream>
+    16  .........1
+    16  PCC-S-02015, unable to open include file
+Error at line 17, column 10 in file c_cpp_includes.h
+    17  #include <iosfwd>
+    17  .........1
+    17  PCC-S-02015, unable to open include file
+Error at line 18, column 10 in file c_cpp_includes.h
+    18  #include <iomanip>
+    18  .........1
+    18  PCC-S-02015, unable to open include file

@@ -1,0 +1,172 @@
+
+/*
+ *  Find the number of jobs and members in EMatch database
+ *  
+ *  Created:    05/11/2001
+ *
+ *  Modified:   05/04/2001
+ *		02/14/2001
+ *		01/14/2002
+ *		04/03/2002
+ *
+ *		02/19/2003
+ *		03/19/2018 (Format of Oracle connection credential change)
+ */
+
+#include "local_const.h"
+
+#include "c_cpp_includes.h"
+#include "c_cpp_header.h"
+
+
+#include <stdio.h>
+
+/* Include the SQL Communications Area, a structure through
+ * which ORACLE makes runtime status information such as error
+ * codes, warning flags, and diagnostic text available to the
+ * program.
+ */
+#include <sqlca.h>
+
+/* Include the ORACLE Communications Area, a structure through
+ * which ORACLE makes additional runtime status information
+ * available to the program.
+ */
+#include <oraca.h>
+
+/* The ORACA=YES option must be specified to enable you
+ * to use the ORACA.
+ */
+
+EXEC ORACLE OPTION (ORACA=YES);
+EXEC ORACLE OPTION (CHAR_MAP=VARCHAR2);
+
+/* Specifying the RELEASE_CURSOR=YES option instructs Pro*C
+ * to release resources associated with embedded SQL
+ * statements after they are executed.  This ensures that
+ * ORACLE does not keep parse locks on tables after data
+ * manipulation operations, so that subsequent data definition
+ * operations on those tables do not result in a parse-lock
+ * error.
+ */
+
+EXEC ORACLE OPTION (RELEASE_CURSOR=YES);
+
+void sql_error(void);
+
+char debug_out_file_name[30] = "real_time_number_out.txt";
+
+ofstream debug_out_stream;
+
+
+// void sql_error(char *msg);
+
+// 
+// The argv[1] is assumed to contain the CGI string
+//
+// The argv[2] is assumed to contain the table index number
+//     The correspondence between table index and table name is given
+//     in the header file my_proc_header.h
+//
+int main(int argc, char * argv[])
+{
+
+	exec sql begin declare section;
+
+		//char    *username = USERNAME; // These two should be defined in "local_const.h"
+		//char    *password = PASSWORD;
+		char    *oracle_credential = ORACLE_CREDENTIAL;
+
+		int     job_table_row_number;
+		int     member_table_row_number;
+		int     c_g_table_row_number;
+
+		char dynstmt[30];
+
+        exec sql end declare section;
+
+	int c1, c2, c3;
+
+
+	exec sql declare c1 cursor for
+		select count(*) from job;
+
+	exec sql declare c2 cursor for
+		select count(*) from member;
+
+	exec sql declare c3 cursor for
+		select count(*) from c_g;
+
+	// Call sql_error() function on any error in an embedded SQL statement.
+	//
+        EXEC SQL WHENEVER SQLERROR DO sql_error();
+
+
+
+/* Save text of current SQL statement in the ORACA if an
+ * error occurs.
+ */
+	oraca.orastxtf = ORASTFERR;
+
+	debug_out_stream.open(debug_out_file_name);
+
+/* Connect to Oracle. */
+
+        //EXEC SQL CONNECT :username IDENTIFIED BY :password;
+
+        EXEC SQL CONNECT :oracle_credential;
+        debug_out_stream << "\nConnected to ORACLE.\n";
+
+
+	EXEC SQL OPEN c1;
+	EXEC SQL OPEN c2;
+	EXEC SQL OPEN c3;
+
+//	exec sql whenever not found do break;
+
+
+	EXEC SQL FETCH c1 INTO :job_table_row_number;
+	EXEC SQL FETCH c2 INTO :member_table_row_number;
+	EXEC SQL FETCH c3 INTO :c_g_table_row_number;
+
+
+        strcpy(dynstmt, "COMMIT   ");
+        debug_out_stream <<  dynstmt;
+
+
+
+/* Commit any outstanding changes and disconnect from Oracle. */
+        EXEC SQL COMMIT RELEASE;
+
+        debug_out_stream << "\nHave a good day!\n";
+        cout << job_table_row_number << " " << member_table_row_number <<
+		 " " << c_g_table_row_number;
+}
+
+
+void sql_error()
+{
+/* This is the Oracle error handler.
+ * Print diagnostic text containing the error message,
+ * current SQL statement, and location of error.
+ */
+    printf("\n%.*s\n",
+       sqlca.sqlerrm.sqlerrml, sqlca.sqlerrm.sqlerrmc);
+    printf("in \"%.*s...\"\n",
+        oraca.orastxt.orastxtl, oraca.orastxt.orastxtc);
+    printf("on line %d of %.*s.\n\n",
+        oraca.oraslnr, oraca.orasfnm.orasfnml,
+        oraca.orasfnm.orasfnmc);
+
+/* Disable Oracle error checking to avoid an infinite loop
+ * should another error occur within this routine as a 
+ * result of the rollback.
+ */
+    EXEC SQL WHENEVER SQLERROR CONTINUE;
+
+/* Roll back any pending changes and disconnect from Oracle. */
+    EXEC SQL ROLLBACK RELEASE;
+
+    //exit(1);
+}
+
