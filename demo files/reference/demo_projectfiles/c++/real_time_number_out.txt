@@ -1,4 +1,0 @@
-
-Connected to ORACLE.
-COMMIT   
-Have a good day!
