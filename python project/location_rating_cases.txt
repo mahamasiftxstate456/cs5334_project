@@ -1,0 +1,62 @@
+ Here are all 9 cases cleanly written out.
+
+User Searches by REGION
+Case 1 — Job has REGION_NAME
+compute_region_rating() checks the compatibility matrix between job region and asked region.
+
+Matrix returns 1 → job region is contained in asked region → deduction = 0
+Matrix returns 2 → regions overlap → deduction = 70, then tries state/city to improve it
+Matrix returns 0 → no overlap → deduction = 100
+
+Case 2 — Job has no REGION_NAME but has STATE_NAME
+compute_region_rating() skips the matrix and calls check_if_state_in_region().
+
+State is in asked region → deduction = 0
+State is not in asked region → deduction = 100
+
+Case 3 — Job has no REGION_NAME, no STATE_NAME but has LOCATION (city)
+compute_region_rating() calls check_if_city_in_region() which loops through all states in the asked region and calls city_is_in_state() for each one.
+
+City belongs to a state that is in the asked region → deduction = 0
+City does not belong to any state in the asked region → deduction = 100
+
+
+User Searches by STATE
+Case 4 — Job has STATE_NAME
+compute_state_rating() looks up the asked state's neighbor list in NEIGHBOR_STATE_RATINGS.
+
+Job state found in neighbor list → deduction = whatever penalty is in the list (0 for exact match, 30-50 for neighbors)
+Job state not found in neighbor list → deduction = 100
+
+Case 5 — Job has no STATE_NAME but has LOCATION (city)
+compute_state_rating() calls city_is_in_state() for each state in the asked state's neighbor list.
+
+City belongs to a state in the neighbor list → deduction = that neighbor's penalty
+City does not belong to any neighbor state → deduction = 100
+
+Case 6 — Job has no STATE_NAME, no LOCATION but has REGION_NAME
+compute_state_rating() sets a default deduction of 30, then calls check_if_state_in_region() to check if the asked state is inside the job's region.
+
+Asked state is in the job region → take max(30, 0) = 30
+Asked state is not in the job region → take max(30, 100) = 100
+
+
+User Searches by CITY
+Case 7 — Job has LOCATION (city), exact match
+compute_city_rating() compares job city index to asked city index directly.
+
+Exact match → deduction = 0
+
+Case 8 — Job has LOCATION (city), not exact match
+compute_city_rating() looks up the asked city's neighbor list in NEIGHBOR_CITY_RATINGS.
+
+Job city found in neighbor list → deduction = whatever penalty is in the list
+Job city not found in neighbor list → deduction = 100
+
+Case 9 — Job has no LOCATION (city)
+compute_city_rating() receives an empty city name, cannot find a city index.
+
+Returns deduction = 100 immediately, no further checks
+
+
+These 9 cases cover every possible combination of what location data is stored in the job row and what the user searched for.
