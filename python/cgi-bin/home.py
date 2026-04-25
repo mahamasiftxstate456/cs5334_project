@@ -20,7 +20,7 @@ Folder: cgi-bin/home.py
 
 How to run:
     Accessed via web browser at:
-    http://newfirebird.cs.txstate.edu/~qkm28/cgi-bin/home.py
+    http://newfirebird.cs.txstate.edu/~netid/cgi-bin/home.py
 """
 
 import sys
@@ -181,10 +181,10 @@ def print_home_page(job_count, member_count, cg_count):
     # ----------------------------------------
     print('<table cellspacing="0" cellpadding="3" border="0">')
     print("<tr>")
-    print('    <td><a href="/~qkm28/cgi-bin/home.py">Home</a>')
-    print('    <td><a href="/~qkm28/html/job_search.html">Job Search</a>')
-    print('    <td><a href="/~qkm28/demo/proc/unix-version/html/employer_login.html">Employers</a>')
-    print('    <td><a href="/~qkm28/demo/proc/unix-version/html/member_login.html">Members</a>')
+    print('    <td><a href="/~netid/cgi-bin/home.py">Home</a>')
+    print('    <td><a href="/~netid/html/job_search.html">Job Search</a>')
+    print('    <td><a href="/~netid/demo/proc/unix-version/html/employer_login.html">Employers</a>')
+    print('    <td><a href="/~netid/demo/proc/unix-version/html/member_login.html">Members</a>')
     print("</tr>")
     print("</table>")
     print("</center>")
@@ -219,7 +219,7 @@ def print_error_page(error_message):
     print("<center><h2>DrPengsAIIPDemos Welcomes You!</h2></center>")
     print("<center>")
     print("<p><b>Error loading page:</b> " + error_message + "</p>")
-    print('<p><a href="/~qkm28/html/job_search.html">Go to Job Search</a></p>')
+    print('<p><a href="/~netid/html/job_search.html">Go to Job Search</a></p>')
     print("</center>")
     print("</body>")
     print("</html>")

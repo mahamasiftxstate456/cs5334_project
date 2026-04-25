@@ -21,7 +21,7 @@ How it is accessed:
   User clicks a job title link in the search results page.
   The link passes job_id in the URL.
   Example URL:
-    /~qkm28/cgi-bin/getjob.py?id=000000001
+    /~netid/cgi-bin/getjob.py?id=000000001
 
 Folder: cgi-bin/getjob.py
 
@@ -90,8 +90,8 @@ def print_header(page_title="DrPengsAIIPDemos Job Search"):
     # Navigation links
     print('<TABLE CELLSPACING="0" CELLPADDING="3" BORDER="0">')
     print("<tr>")
-    print('    <td><a href="/~qkm28/cgi-bin/home.py">Home</a></td>')
-    print('    <td><a href="/~qkm28/html/job_search.html">Job Search</a></td>')
+    print('    <td><a href="/~netid/cgi-bin/home.py">Home</a></td>')
+    print('    <td><a href="/~netid/html/job_search.html">Job Search</a></td>')
     print("</tr>")
     print("</TABLE>")
     print("<br>")
@@ -106,8 +106,8 @@ def print_footer():
     print("<center>")
     print('<TABLE CELLSPACING="0" CELLPADDING="3" BORDER="0">')
     print("<tr>")
-    print('    <td><a href="/~qkm28/cgi-bin/home.py">Home</a></td>')
-    print('    <td><a href="/~qkm28/html/job_search.html">Job Search</a></td>')
+    print('    <td><a href="/~netid/cgi-bin/home.py">Home</a></td>')
+    print('    <td><a href="/~netid/html/job_search.html">Job Search</a></td>')
     print("</tr>")
     print("</table>")
     print("<br>")
@@ -280,7 +280,7 @@ try:
 
         print("<h2>No Job Selected</h2>")
         print("<p>No job ID was provided.</p>")
-        print('<p><a href="/~qkm28/html/job_search.html">Go back to Job Search</a></p>')
+        print('<p><a href="/~netid/html/job_search.html">Go back to Job Search</a></p>')
 
     else:
 
@@ -292,7 +292,7 @@ try:
 
             print("<h2>Job Not Found</h2>")
             print("<p>Job ID <b>" + str(job_id) + "</b> was not found in the database.</p>")
-            print('<p><a href="/~qkm28/html/job_search.html">Go back to Job Search</a></p>')
+            print('<p><a href="/~netid/html/job_search.html">Go back to Job Search</a></p>')
 
         else:
 
@@ -311,7 +311,7 @@ try:
             print("<h2>Job description</h2>")
 
             # Resume form - submit_resume.pl was never provided in demo
-            print('<form action="/~qkm28/cgi-bin/submit_resume.pl">')
+            print('<form action="/~netid/cgi-bin/submit_resume.pl">')
 
             # Job details in green color #006600 - same as demo
             print("<b>")
@@ -400,5 +400,5 @@ except Exception as top_level_error:
 
     print("<h2>Error</h2>")
     print("<p>" + str(top_level_error) + "</p>")
-    print('<p><a href="/~qkm28/html/job_search.html">Go back to Job Search</a></p>')
+    print('<p><a href="/~netid/html/job_search.html">Go back to Job Search</a></p>')
     print_footer()
