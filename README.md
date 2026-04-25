@@ -1,17 +1,38 @@
 # CS5334 Job Search Expansion
 
-## Repository Purpose
-This repository contains the project workspae for extending the Python flavor of the CS5334 job search demo.
+## Overview
 
-## Repository Structure
-- `reference/demo_projectfiles/`: original reference files for study
-- `docs/` : project notes, feature planning, test cases, and report draft
-- `python/` : Python implementation files for the required features
-- `evidence/` : screenshots, logs, and test result samples
+This repository contains a Python-based implementation supported by structured documentation, test cases, and execution evidence.
 
-## Project Goal
-Implement:
-    1. Job Type Rating
-    2. Company Name Rating
-    3. Similar Company Search
-    4. Keyword Search
+## Project Structure
+cs5334_project/
+|--- demo_files/    #Reference or provided demo materials
+|   |--- cgi-bin/
+|   |--- cpp/
+|   |--- html/
+|
+|--- docs/  #Project documentation and notes
+|   |--- feature_specs.md
+|   |--- location_rating_cases.txt
+|   |--- project_notes.md
+|   |---submission_report.md
+|   |--- test_cases.md
+|
+|--- evidence/  #Execution outputs, logs, and validation artifacts
+|   |--- screenshots/
+|   |--- logs/
+|   |--- sample_queries/
+|
+|--- python/    #Core Python implementation
+|   |--- cgi-bin/
+|   |--- html/
+|   |--- lib.
+|
+|--- .gitignore
+|--- PROJECT_STATUS.md
+|--- README.md
+
+## Python Implementation
+
+The `python/` directory contains the main system implementation.
+
