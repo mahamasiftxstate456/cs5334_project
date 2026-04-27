@@ -30,8 +30,8 @@ import os
 # Add project root to path so imports work when called from cgi-bin
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from config import JOB_TYPE_PENALTY, SIMILAR_COMPANIES
-from location_data import (
+from lib.config import JOB_TYPE_PENALTY, SIMILAR_COMPANIES
+from lib.location_data import (
     REGION_COMPATIBILITY,
     NEIGHBOR_STATE_RATINGS,
     NEIGHBOR_CITY_RATINGS,
