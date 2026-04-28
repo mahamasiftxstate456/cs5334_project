@@ -24,13 +24,6 @@ How it is accessed:
     /~netid/cgi-bin/getjob.py?id=000000001
 
 Folder: cgi-bin/getjob.py
-
-FIXES APPLIED:
-  Fix 1 - Content-Type printed ONCE at top, never again in except
-  Fix 2 - sql and binds defined separately before cursor.execute()
-  Fix 3 - All page output inlined in try/except, no separate print functions
-  Fix 4 - print_header and print_footer copied here directly
-           because Python cannot import from folders with dash in name (cgi-bin)
 """
 
 import sys
@@ -44,77 +37,16 @@ cgitb.enable()
 # Add the project root to Python path so we can import from lib/
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
+# Add the cgi-bin folder itself to path so we can import common.py
+# common.py is in the same folder as this file (cgi-bin/)
+# This avoids the "from cgi-bin.common import" syntax error
+# because Python cannot import from folders with a dash in the name
+sys.path.insert(0, os.path.dirname(__file__))
+
 import cx_Oracle
 from lib.db import get_connection
-
-
-# -----------------------------------------------
-# FIX 4: print_header and print_footer copied here
-# directly from cgi-bin/common.py
-#
-# REASON: Python cannot import from a folder whose
-# name contains a dash. Our folder is named cgi-bin
-# not cgi_bin so this import would fail:
-#   from cgi_bin.common import print_header  <- fails
-#
-# Copying the functions here avoids this problem entirely.
-# Same fix should be applied in jobsearch.py as well.
-# -----------------------------------------------
-
-def print_header(page_title="DrPengsAIIPDemos Job Search"):
-    """
-    Prints the HTML header for every page.
-    Copied directly from cgi-bin/common.py.
-    """
-    print("<html>")
-    print("<head>")
-    print("<title>" + page_title + "</title>")
-    print("</head>")
-    print('<body BGCOLOR="#FFFFFF" LINK="#0088ff" ALINK="#FF0000" VLINK="#CC0000">')
-
-    # Blue title bar - same as demo
-    print('<table width="800" bgcolor="#3366ff">')
-    print("<tr>")
-    print("    <td>")
-    print('        <H1><i><font color="#ffcc00"> DrPengsAIIPDemos.Com </font></i></H1>')
-    print("    </td>")
-    print("</tr>")
-    print("<tr>")
-    print("    <td>")
-    print('        <font color="#ffffcc">The on-line career and recruitment center')
-    print("        dedicated to the high tech industry over the world</font>")
-    print("    </td>")
-    print("</tr>")
-    print("</table>")
-
-    # Navigation links
-    print('<TABLE CELLSPACING="0" CELLPADDING="3" BORDER="0">')
-    print("<tr>")
-    print('    <td><a href="/~netid/cgi-bin/home.py">Home</a></td>')
-    print('    <td><a href="/~netid/html/job_search.html">Job Search</a></td>')
-    print("</tr>")
-    print("</TABLE>")
-    print("<br>")
-
-
-def print_footer():
-    """
-    Prints the HTML footer for every page.
-    Copied directly from cgi-bin/common.py.
-    """
-    print("<br><br>")
-    print("<center>")
-    print('<TABLE CELLSPACING="0" CELLPADDING="3" BORDER="0">')
-    print("<tr>")
-    print('    <td><a href="/~netid/cgi-bin/home.py">Home</a></td>')
-    print('    <td><a href="/~netid/html/job_search.html">Job Search</a></td>')
-    print("</tr>")
-    print("</table>")
-    print("<br>")
-    print("<i>Copyright &copy; 2026 DrPengsAIIPDemos.com Inc. All rights reserved.</i>")
-    print("</center>")
-    print("</body>")
-    print("</html>")
+from common import print_header
+from common import print_footer
 
 
 # -----------------------------------------------
@@ -168,10 +100,10 @@ def fetch_job_by_id(job_id):
     """
     Query the database for the full job row using job_id.
 
-    FIX 2: sql and binds are defined as separate variables
-    before cursor.execute() is called. This makes the code
-    clearer - you can see exactly what query will run and
-    what values will be substituted before execution happens.
+    sql and binds are defined as separate variables before
+    cursor.execute() is called. This makes the code clearer -
+    you can see exactly what query will run and what values
+    will be substituted before execution happens.
 
     Parameters:
         job_id -- the job id string from the URL
@@ -189,7 +121,7 @@ def fetch_job_by_id(job_id):
         conn   = get_connection()
         cursor = conn.cursor()
 
-        # FIX 2: sql defined separately - the query with :placeholder
+        # sql defined separately - the query with :placeholder
         sql = "SELECT JOB_ID, JOB_TYPE, JOB_TITLE, SPECIALIZATION, "
         sql = sql + "COUNTRY_CODE, REGION_NAME, STATE_NAME, LOCATION, "
         sql = sql + "MIN_SALARY, MAX_SALARY, COMPANY_NAME, START_DATE, "
@@ -197,7 +129,7 @@ def fetch_job_by_id(job_id):
         sql = sql + "FROM job "
         sql = sql + "WHERE JOB_ID = :job_id"
 
-        # FIX 2: binds defined separately - maps placeholder to actual value
+        # binds defined separately - maps placeholder to actual value
         # Oracle replaces :job_id with the actual job_id value safely
         # The URL value never goes directly into the SQL string
         # This prevents SQL injection attacks
@@ -250,32 +182,31 @@ def fetch_job_by_id(job_id):
 # MAIN ENTRY POINT
 # This runs when the web server calls getjob.py
 #
-# FIX 1: Content-Type is printed ONCE here at the
-# very top before the try block. It is never printed
-# again anywhere - not even in the except block.
-# Printing Content-Type a second time after HTML has
-# already started would break the page completely.
+# Content-Type is printed ONCE here at the very top
+# before the try block. It is never printed again
+# anywhere - not even in the except block.
 #
-# FIX 3: All page output is written directly inside
-# the try/except blocks. No separate print_not_found,
+# print_header() in common.py does NOT print Content-Type
+# so there is no risk of printing it twice.
+#
+# All page output is written directly inside the
+# try/except blocks. No separate print_not_found,
 # print_no_id, or print_error functions needed.
-# This keeps all the output logic in one place and
-# makes the flow easier to follow.
 # ===============================================
 
-# FIX 1: Content-Type printed ONCE here - never again
+# Content-Type printed ONCE here - never again
 print("Content-Type: text/html")
 print()
 
 try:
 
-    # Print page header
+    # Print page header - only prints HTML tags, not Content-Type
     print_header("Job Description")
 
     # Read job_id from URL
     job_id = get_job_id()
 
-    # FIX 3: No job id case - inlined directly here
+    # No job id case
     if job_id is None:
 
         print("<h2>No Job Selected</h2>")
@@ -287,7 +218,7 @@ try:
         # Fetch full job row from database using job_id
         job = fetch_job_by_id(job_id)
 
-        # FIX 3: Job not found case - inlined directly here
+        # Job not found case
         if job is None:
 
             print("<h2>Job Not Found</h2>")
@@ -295,8 +226,6 @@ try:
             print('<p><a href="/~netid/html/job_search.html">Go back to Job Search</a></p>')
 
         else:
-
-            # FIX 3: Job detail output - inlined directly here
 
             # Build salary display string
             min_salary = job["MIN_SALARY"]
@@ -390,12 +319,11 @@ try:
             print('<input type=submit value="Submit your resume for this job">')
             print("</form>")
 
-    # Print page footer
+    # Print page footer - closes </body></html>
     print_footer()
 
 
-# FIX 1: Content-Type NOT printed here again
-# FIX 3: Error output inlined here directly
+# Content-Type NOT printed here again
 except Exception as top_level_error:
 
     print("<h2>Error</h2>")

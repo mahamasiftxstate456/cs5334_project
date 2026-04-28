@@ -4,7 +4,7 @@ test_rating.py
 -------------
 Standalone tests for rating.py
 
-Run from the project root directory:
+Run from the cs5334_finalproject root directory:
     python3 tests/test_rating.py
 
 All dependencies (lib/config.py and lib/location_data.py) must be implemented before running these tests.
@@ -13,7 +13,16 @@ All dependencies (lib/config.py and lib/location_data.py) must be implemented be
 import sys
 import os
 
-# Add python/lib to the path so rating.py and its siblings can be imported
+# Folder structure:
+#   cs5334_finalproject/
+#       tests/          <- this file lives here
+#       python/
+#           lib/        <- rating.py, config.py, location_data.py live here
+#           cgi-bin/
+#
+# Add python/ to path so "from lib.config import" works inside rating.py
+# Add python/lib/ to path so "from rating import" works in this test file
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "python"))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "python", "lib"))
 
 from rating import (
