@@ -34,8 +34,8 @@ import cx_Oracle
 # YOUR DATABASE CREDENTIALS
 # Fill these in once, never touch again
 # -----------------------------------------------
-DB_USER     = ""           # your txstate username
-DB_PASSWORD = ""   # your oracle password
+DB_USER     = "VYA16"           # your txstate username
+DB_PASSWORD = "vya16cs5334"   # your oracle password
 DB_DSN      = "csdbora"         # service name
 # -----------------------------------------------
 
