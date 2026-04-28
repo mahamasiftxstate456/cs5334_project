@@ -16,6 +16,17 @@ Usage (from another file):
     cursor.close()
     conn.close()
 """
+import os
+
+# -----------------------------------------------
+# Oracle client environment variables
+# Must be set BEFORE cx_Oracle is imported so
+# the library can locate the Oracle client files
+# on newfirebird.cs.txstate.edu
+# -----------------------------------------------
+os.environ["ORACLE_HOME"]      = "/usr/lib/oracle/21/client64"
+os.environ["LD_LIBRARY_PATH"]  = "/usr/lib/oracle/21/client64/lib"
+os.environ["TNS_ADMIN"]        = "/usr/lib/oracle/21/client64/network/admin"
 
 import cx_Oracle
 
