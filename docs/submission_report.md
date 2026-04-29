@@ -244,40 +244,8 @@ layer using the existing job table schema.
 
 ### README
 
-#### Requirements
-
-- Python 3 (available on newfirebird)
-- cx_Oracle library: `pip3 install cx_Oracle --user`
-- Oracle client libraries (already installed at `/usr/lib/oracle/21/client64`)
-- Oracle database accessible at `oracle.cs.txstate.edu:1521`
-
-#### Setup on newfirebird
-
-1. Copy all project files to `/home/[netid]/public_html/`
-2. Make CGI scripts executable:
-```
-chmod +x ~/public_html/cgi-bin/home.py
-chmod +x ~/public_html/cgi-bin/jobsearch.py
-chmod +x ~/public_html/cgi-bin/getjob.py
-```
-3. Fill in Oracle credentials in `lib/db.py`:
-```
-DB_USER     = "your_username"
-DB_PASSWORD = "your_password"
-DB_DSN      = "csdbora"
-```
-4. Test database connection:
-```
-cd ~/public_html
-python3 lib/db.py
-```
-Should print: `SUCCESS - Connected to Oracle!`
-
-#### Access the project
-
-```
-http://newfirebird.cs.txstate.edu/~[netid]/html/job_search.html
-```
+See `README.md` in the project root. It includes the complete URL, setup
+instructions, how to run the program, and how to run the tests.
 
 ---
 
@@ -307,6 +275,18 @@ All source files are on `newfirebird.cs.txstate.edu` under:
         config.py
         location_data.py
         rating.py
+    tests/
+        test_rating.py
+        test_getjob.py
+        test_jobsearch.py
+```
+
+Tests can be run from `/home/[netid]/public_html/` with:
+
+```bash
+python3 tests/test_rating.py
+python3 tests/test_getjob.py
+python3 tests/test_jobsearch.py
 ```
 
 All functions are commented with their parameters, purpose, and return values.

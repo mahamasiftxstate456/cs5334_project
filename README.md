@@ -38,6 +38,10 @@ All source files are on `newfirebird.cs.txstate.edu` at:
         config.py             — job type penalties, similar companies, salary table
         location_data.py      — region, state, and city lookup tables
         rating.py             — rating engine implementing all four project features
+    tests/
+        test_rating.py        — tests for lib/rating.py
+        test_getjob.py        — tests for cgi-bin/getjob.py
+        test_jobsearch.py     — tests for cgi-bin/jobsearch.py
 ```
 
 ---
@@ -82,6 +86,19 @@ python3 lib/db.py
 ```
 
 Expected output: `SUCCESS - Connected to Oracle!`
+
+---
+
+## Running the Tests
+
+```bash
+cd ~/public_html
+python3 tests/test_rating.py
+python3 tests/test_getjob.py
+python3 tests/test_jobsearch.py
+```
+
+All 37 tests should print PASS and exit cleanly.
 
 ---
 
