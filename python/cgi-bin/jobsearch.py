@@ -563,7 +563,17 @@ def print_pagination_links(current_page, total_pages, query_string):
         query_string -- the original GET query string from the form
     """
 
-    base_url = "/~netid/cgi-bin/jobsearch.py?" + query_string
+    # Remove any existing requested_page_number from query_string
+    # so we do not end up with duplicates like:
+    # ?...&requested_page_number=5&requested_page_number=6
+    params_list        = query_string.split("&")
+    cleaned            = []
+    for param in params_list:
+        if not param.startswith("requested_page_number"):
+              cleaned.append(param)
+    clean_query_string = "&".join(cleaned)
+
+    base_url = "/~netid/cgi-bin/jobsearch.py?" + clean_query_string
 
     print("<br>")
     print("(Page " + str(current_page) + " of " + str(total_pages) + ")")
